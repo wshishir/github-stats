@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Github } from "lucide-react";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
@@ -14,27 +15,11 @@ const Navbar = () => {
             <NavLink
               to='/'
               end
-              className={({ isActive }) =>
-                `px-3 py-2 rounded-md text-sm font-medium ${
-                  isActive
-                    ? "bg-blue-600 text-white"
-                    : "text-gray-700 hover:bg-gray-100"
-                }`
-              }
-            >
-              Search
+            ><Button className="bg-blue-700 hover:bg-blue-600">
+              Search</Button>
             </NavLink>
-            <NavLink
-              to='/history'
-              className={({ isActive }) =>
-                `px-3 py-2 rounded-md text-sm font-medium ${
-                  isActive
-                    ? "bg-blue-600 text-white"
-                    : "text-gray-700 hover:bg-gray-100"
-                }`
-              }
-            >
-              History
+            <NavLink to='/history'>
+              <Button className="text-black border-0">History</Button>
             </NavLink>
           </div>
         </div>
